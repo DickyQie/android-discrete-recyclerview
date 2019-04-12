@@ -5,7 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.zhangqie.discrete.demo1.Demo1;
+import com.zhangqie.discrete.demo1.ShopListActivity;
+import com.zhangqie.discrete.demo2.GalleryActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +18,14 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Demo1.class));
+                startActivity(new Intent(MainActivity.this, ShopListActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, GalleryActivity.class));
             }
         });
     }

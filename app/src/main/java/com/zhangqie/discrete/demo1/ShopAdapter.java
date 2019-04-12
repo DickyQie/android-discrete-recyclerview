@@ -9,21 +9,22 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.zhangqie.discrete.R;
 
 import java.util.List;
 
 /**
  * Created by zhangqie on 2019/3/15
- * Describe:
+ * Describe: Adapter
  */
-public class Demo1Adapter extends  RecyclerView.Adapter<Demo1Adapter.ViewHolder>{
+public class ShopAdapter extends  RecyclerView.Adapter<ShopAdapter.ViewHolder>{
 
     private Context context;
     private List<GoodBean> goodBeanList;
     private Integer[] strImages = new Integer[]{R.drawable.shop1,R.drawable.shop2,R.drawable.shop3};
 
-    public Demo1Adapter(Context context, List<GoodBean> goodBeanList){
+    public ShopAdapter(Context context, List<GoodBean> goodBeanList){
         this.context = context;
         this.goodBeanList = goodBeanList;
     }
@@ -43,7 +44,9 @@ public class Demo1Adapter extends  RecyclerView.Adapter<Demo1Adapter.ViewHolder>
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        viewHolder.iv_goods_icon.setImageResource(strImages[i]);
+        Glide.with(viewHolder.itemView.getContext())
+                .load(strImages[i])
+                .into(viewHolder.iv_goods_icon);
         viewHolder.tv_goods_content.setText(goodBeanList.get(i).getContent());
         viewHolder.tv_price.setText("$"+goodBeanList.get(i).getPrice());
     }
