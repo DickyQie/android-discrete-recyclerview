@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * Created by zhangqie on 2019/3/15
- * Describe:
+ * Describe: https://github.com/yarolegovich/DiscreteScrollView
  */
 public class ShopListActivity extends AppCompatActivity implements DiscreteRecyclerView.OnItemChangedListener {
 
