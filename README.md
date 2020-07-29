@@ -6,6 +6,7 @@
 
 RecyclerView的可滚动的列表实现,视图相邻的视图在屏幕上部分或完全可见(水平3个item，第一个和第三个显示一部分，第二个完全显示)
 
+参考项目： https://github.com/yarolegovich/DiscreteScrollView
 
 
 效果如图：
